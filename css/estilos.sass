@@ -1,0 +1,91 @@
+$gris: #A3A4AC
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Poppins', sans-serif
+.cesium-credit-textContainer
+    &::before
+        display: none
+#earth_div
+    width: 100%
+    height: 100vh
+.header
+    position: absolute
+    top: 30px
+    left: 0
+    background: rgba(163,164,172,0.6)
+    z-index: 2
+    padding: 24px 40px 25px 10px
+    border-radius: 0 20px 20px 0
+    h1
+        color: #f4f4f4
+        font-weight: 400
+.generalData
+    grid-area: GeneralData
+.generalHistory
+    grid-area: GeneralHistory
+.description
+    width: 100%
+    background: $gris
+    padding-top: 30px
+    position: relative
+    display: grid
+    text-align: center
+    grid-template: 1fr 1fr/100px 1fr 100px
+    grid-template-areas: ". GeneralData ." ". GeneralHistory ."
+    h2
+        margin-bottom: 30px
+    .generalData-Data
+        display: grid
+        grid-template: 1fr 1fr/1fr 1fr 1fr
+        grid-row-gap: 40px
+        text-align: center
+    .arrow
+        position: absolute
+        top: 50px
+        right: 20px
+        background: #c4c4c4
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        padding: 10px
+        cursor: pointer
+        img
+            width: 100%
+
+    .overlay
+        text-decoration: none
+        color: #ffffff
+        background: $gris
+        position: absolute
+        top: -48px
+        left: 50%
+        right: 50%
+        transform: translateX(-50%)
+        min-width: 200px
+        max-width: 500px
+        height: 50px
+        padding: 10px 0 0 0
+        text-align: center
+        cursor: pointer
+        &::before
+            content: " "
+            position: absolute
+            background: $gris
+            width: 50px
+            height: 50px
+            top: 0
+            left: -49px
+            z-index: 5
+            clip-path: polygon(100% 0, 26% 100%, 100% 100%)
+        &::after
+            content: " "
+            position: absolute
+            background: $gris
+            width: 50px
+            height: 50px
+            top: 0
+            right: -49px
+            z-index: 5
+            clip-path: polygon(0 0, 74% 100%, 0 100%)
